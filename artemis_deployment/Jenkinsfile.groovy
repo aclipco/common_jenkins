@@ -15,7 +15,6 @@ node('master') {
     stage('Generate Vars') {
         def file = new File("${WORKSPACE}/google_artemis/artemis.tfvars")
         file.write """
-        password              =  "${password}"
         namespace             = "${namespace}"
 
         """
