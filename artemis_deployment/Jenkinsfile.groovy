@@ -6,6 +6,7 @@ node('master') {
  properties([parameters([
     booleanParam(defaultValue: false, description: 'If you press this parameter it will apply all the changes', name: 'terraformApply'), 
     booleanParam(defaultValue: false, description: 'if you press this parameter it will destroy everything', name: 'terraformDestroy')
+    string(defaultValue: 'test', description: 'please provide namespace', name: 'namespace', trim: true)
     ]
     )])
     stage('Checkout SCM') {
